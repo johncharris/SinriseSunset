@@ -10,5 +10,6 @@
 			<Label Text="🌇" FontSize="80" />
 			<Label Text="{Binding SunsetTime}" VerticalOptions="Center" FontSize="80" />
 		</StackLayout>
+  <Button Text="YearView" Command="{Binding ShowYearCommand}" />
 	</StackLayout>
 </ContentPage>

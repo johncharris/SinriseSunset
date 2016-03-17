@@ -37,8 +37,12 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="PageModels\SingleDayPageModel.cs" />
+    <Compile Include="PageModels\YearPageModel.cs" />
     <Compile Include="Pages\SingleDayPage.xaml.cs">
       <DependentUpon>SingleDayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\YearPage.xaml.cs">
+      <DependentUpon>YearPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,7 +112,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\YearPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>

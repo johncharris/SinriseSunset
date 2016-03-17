@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Innovative.SolarCalculator;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace SunriseSunset.PageModels
 {
@@ -27,6 +29,8 @@ namespace SunriseSunset.PageModels
         public PlotModel Graph { get; set; }
 
         public ObservableCollection<SolarInfo> SolarInfos { get; set; } = new ObservableCollection<SolarInfo>();
+
+        public ICommand ShowYearCommand {  get { return new Command(() => CoreMethods.PushPageModel<YearPageModel>()); } }
 
         public override async void Init(object initData)
         {

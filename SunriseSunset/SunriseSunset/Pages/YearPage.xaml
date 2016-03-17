@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SunriseSunset.Pages.YearPage"
+  Title="Year">
+  <Grid>
+    <ListView ItemsSource="{Binding SolarInfos}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+
+              <Label Text="{Binding Date, StringFormat='{0:d}'}" />
+              <Label Text="{Binding SunriseToSunset}" HorizontalOptions="Center" Grid.Column="1"/>
+              <Label Text="{Binding DayLength, StringFormat='{0:hh}:{0:mm}'}" Grid.Column="2" HorizontalOptions="End" />
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Grid>
+</ContentPage>
